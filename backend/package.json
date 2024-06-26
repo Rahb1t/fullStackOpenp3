@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build:ui": "rm -rf dist && cd ../phonebook/ && npm run build && cp -r dist ../backend",
+    "deploy": "fly deploy",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
